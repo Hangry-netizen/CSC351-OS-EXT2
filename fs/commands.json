@@ -1,0 +1,282 @@
+{
+  "commands": [
+      {
+          "name": "ls",
+          "description": "List directory contents",
+          "syntax": {
+                "command": "ls",
+                "args": [
+                        {
+                            "name": "directory",
+                            "description": "The directory to list",
+                            "type": "path",
+                            "required": false
+                        }
+                ]
+          }
+      },
+      {
+          "name": "cd",
+          "description": "Change the shell working directory",
+          "syntax": {
+              "command": "cd",
+              "args": [
+                    {
+                        "name": "directory",
+                        "description": "The directory to change to",
+                        "type": "path",
+                        "required": false
+                    }
+              ]
+          }
+      },
+      {
+          "name": "lcp",
+          "description": "The lcp command shall copy the specified files from the host system’s current directory to the file system’s current directory",
+          "syntax": {
+                "command": "lcp",
+                "args": [
+                        {
+                            "name": "source",
+                            "description": "The source file to copy",
+                            "type": "path",
+                            "required": true
+                        },
+                        {
+                            "name": "destination",
+                            "description": "The destination file to copy to",
+                            "type": "path",
+                            "required": true
+                        }
+                ]
+          }
+      },
+      {
+          "name": "Lcp",
+          "description": "Lcp command shall copy the specified files from the file system’s current directory to the host system’s current directory",
+          "syntax": {
+                "command": "Lcp",
+                "args": [
+                        {
+                            "name": "source",
+                            "description": "The source file to copy",
+                            "type": "path",
+                            "required": true
+                        },
+                        {
+                            "name": "destination",
+                            "description": "The destination file to copy to",
+                            "type": "path",
+                            "required": true
+                        }
+                ]
+          }
+      },
+      {
+          "name": "mkdir",
+          "description": "Create new directory",
+          "syntax": {
+                "command": "mkdir",
+                "args": [
+                        {
+                            "name": "directory",
+                            "description": "The directory to create",
+                            "type": "path",
+                            "required": true
+                        },
+                        {
+                            "name": "additional_files 1",
+                            "description": "Additional files to remove",
+                            "type": "path",
+                            "required": false
+                        },
+                        {
+                            "name": "additional_files 2",
+                            "description": "Additional files to remove",
+                            "type": "path",
+                            "required": false
+                        }
+                ]
+          }
+      },
+      {
+            "name": "cp",
+            "description": "Copy files and directories",
+            "syntax":{ 
+                "command": "cp",
+                "args": [
+                    {
+                        "name": "source",
+                        "description": "The source file to copy",
+                        "type": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "description": "The destination file to copy to",
+                        "type": "path",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "mv",
+            "description": "Move or rename files and directories",
+            "syntax": {
+                "command": "mv",
+                "args": [
+                    {
+                        "name": "source",
+                        "description": "The source file to move",
+                        "type": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "description": "The destination file to move to",
+                        "type": "path",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "cat",
+            "description": "Print the contents of one or more files on the standard output",
+            "syntax": {
+                "command": "cat",
+                "args": [
+                    {
+                        "name": "file",
+                        "description": "The file to print",
+                        "type": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "additional_files 1",
+                        "description": "Additional files to remove",
+                        "type": "path",
+                        "required": false
+                    },
+                    {
+                        "name": "additional_files 2",
+                        "description": "Additional files to remove",
+                        "type": "path",
+                        "required": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "rmdir",
+            "description": "Remove directories",
+            "syntax": {
+                "command": "rmdir",
+                "args": [
+                    {
+                        "name": "directory",
+                        "description": "The directory to remove",
+                        "type": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "additional_directory 1",
+                        "description": "Additional files to remove",
+                        "type": "path",
+                        "required": false
+                    },
+                    {
+                        "name": "additional_directory 2",
+                        "description": "Additional files to remove",
+                        "type": "path",
+                        "required": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "rm",
+            "description": "Remove one or more files",
+            "syntax": {
+                "command": "rm",
+                "args": [
+                    {
+                        "name": "file",
+                        "description": "The file to remove",
+                        "type": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "additional_files 1",
+                        "description": "Additional files to remove",
+                        "type": "path",
+                        "required": false
+                    },
+                    {
+                        "name": "additional_files 2",
+                        "description": "Additional files to remove",
+                        "type": "path",
+                        "required": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "chown",
+            "description": "Change file owner and group",
+            "syntax": {
+                "command": "chown",
+                "args": [
+                    {
+                        "name": "user",
+                        "description": "The user to change to",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "group",
+                        "description": "The group to change to",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "file",
+                        "description": "The file to change",
+                        "type": "path",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "ln",
+            "description": "Create a hard link",
+            "syntax": {
+                "command": "ln",
+                "args": [
+                    {
+                        "name": "source",
+                        "description": "The source file to link",
+                        "type": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "description": "The destination file to link to",
+                        "type": "path",
+                        "required": true
+                    }
+                ]
+            }
+        },
+      {
+          "name": "shutdown",
+          "description": "Shutdown the system",
+          "syntax": {
+                "command": "shutdown",
+                "args": []
+          }
+      }
+  ]
+}
